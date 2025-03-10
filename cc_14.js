@@ -75,7 +75,7 @@ function HighPriorityTickets() {
         // created loop for each ticket
         if (ticket.textContent.includes("Priority: High")) { 
             // checks if ticket is high priority 
-            ticket.parentElement.style.backgroundColor = "yellow"; 
+            ticket.parentElement.style.backgroundColor = "orange"; 
             // highlights yellow if so
         }
     });
