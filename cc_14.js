@@ -31,7 +31,25 @@ function addSupportTicket(Name, issue, priority) {
         container.removeChild(ticket);
     });
 
-   
+//Task 5 - Inline Editing for Support Tickets
+function createEditButton() {
+    const editButton = document.createElement("button"); // Create Edit button
+    editButton.textContent = "Edit Ticket"; // Set button text
+    
+    
+    editButton.addEventListener("dblclick", function() { //added double click function
+        console.log("Double-clicked Edit button (no action)."); // Logged
+    });
+
+    // Append button outside ticket container
+    document.body.appendChild(editButton); 
+}
+// Display button on page load
+window.onload = function() {
+    createEditButton(); // Show button
+};
+
+
     // Append elements
     ticket.appendChild(custName);
     ticket.appendChild(issuedes);
@@ -57,8 +75,8 @@ function HighPriorityTickets() {
         // created loop for each ticket
         if (ticket.textContent.includes("Priority: High")) { 
             // checks if ticket is high priority 
-            ticket.parentElement.style.backgroundColor = "lavender"; 
-            // highlights purple if so
+            ticket.parentElement.style.backgroundColor = "yellow"; 
+            // highlights yellow if so
         }
     });
 }
@@ -78,5 +96,6 @@ window.onload = function() {
 ///task 3 test 
     HighPriorityTickets();
 };
+
 
 
