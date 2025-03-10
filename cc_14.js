@@ -31,6 +31,7 @@ function addSupportTicket(Name, issue, priority) {
         container.removeChild(ticket);
     });
 
+   
     // Append elements
     ticket.appendChild(custName);
     ticket.appendChild(issuedes);
@@ -38,7 +39,9 @@ function addSupportTicket(Name, issue, priority) {
     ticket.appendChild(resolveButton);
   // Appends elements
 
-    
+  ticket.addEventListener("click", function() {
+    console.log(`${custName.textContent} card clicked`);
+});
     container.appendChild(ticket);
     //appends the ticket to container 
 }
@@ -75,3 +78,5 @@ window.onload = function() {
 ///task 3 test 
     HighPriorityTickets();
 };
+
+
